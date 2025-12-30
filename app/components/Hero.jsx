@@ -2,6 +2,13 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
+/**
+ * Render the hero section showcasing the MacBook Pro with a title image, an autoplaying muted background video, a purchase button, and pricing.
+ *
+ * On mount, sets the attached video's playback rate to 2x if the video element is available.
+ *
+ * @returns {JSX.Element} The root `<section>` element for the hero area.
+ */
 function Hero() {
   const videoRef = useRef();
 
