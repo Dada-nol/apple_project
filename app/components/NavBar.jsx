@@ -3,22 +3,19 @@ import { navLinks } from "../constants/index";
 
 const NavBar = () => {
   return (
-    <header className="mt-4 mx-[60px]">
-      <nav className="flex justify-between items-center">
-        {<img src="/logo.svg" alt="Apple logo" />}
+    <header>
+      <nav>
+        {<Image src="/logo.svg" alt="Apple logo" width={24} height={24} />}
 
-        <ul className="flex flex-row items-center justify-center gap-4">
+        <ul>
           {navLinks.map(({ label }) => (
-            <li
-              key={label}
-              className="hover:text-white text-sm font-light text-gray-400"
-            >
+            <li key={label}>
               <a href={label}>{label}</a>
             </li>
           ))}
         </ul>
 
-        <div className="flex gap-3">
+        <div className="flex-center gap-3">
           <button>
             <Image src="/search.svg" alt="Search" width={24} height={24} />
           </button>
