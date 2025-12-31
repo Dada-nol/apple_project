@@ -1,12 +1,11 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
 import useMacBookStore from "../store/index";
 import clsx from "clsx";
 import { Canvas } from "@react-three/fiber";
-import { Box, OrbitControls } from "@react-three/drei";
-import MacbookModel14 from "./models/Macbook-14";
-import MacbookModel16 from "./models/Macbook-16";
+// import { Box, OrbitControls } from "@react-three/drei";
+// import MacbookModel14 from "./models/Macbook-14";
+// import MacbookModel16 from "./models/Macbook-16";
 
 import StudioLights from "./three/StudioLight";
 import ModelSwitcher from "./three/ModelSwitcher.jsx";
@@ -22,8 +21,8 @@ function ProductViewer() {
       <h2>Take a closer look.</h2>
 
       <div className="controls">
-        <p className="info">MacbookPro 16" in {color}</p>
-
+        <p className="info"></p>
+        Macbook Pro | Available in 14" & 16"16" in Space Gray and Dark colors
         <div className="flex-center gap-5 mt-5">
           <div className="color-control">
             <div
