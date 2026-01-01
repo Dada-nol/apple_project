@@ -2,7 +2,7 @@
 import { useMediaQuery } from "react-responsive";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger"; 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Enregistrer le plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +28,12 @@ const Showcase = () => {
           transform: "scale(1.1)",
         })
         .to(".content", { opacity: 1, y: 0, ease: "power1.in" });
+    } else {
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (trigger.vars.trigger === "#showcase") {
+          trigger.kill();
+        }
+      });
     }
   }, [isTablet]);
 
@@ -64,7 +70,9 @@ const Showcase = () => {
                 hardware-accelerated ray tracing brings console-level graphics
                 to your fingertips.
               </p>
-              <p className="text-primary">Learn more about Apple intelligence</p>
+              <p className="text-primary">
+                Learn more about Apple intelligence
+              </p>
             </div>
           </div>
 
